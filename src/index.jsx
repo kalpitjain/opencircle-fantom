@@ -4,7 +4,7 @@ import {
   RainbowKitProvider,
   connectorsForWallets,
 } from "@rainbow-me/rainbowkit";
-import { fantomTestnet } from "wagmi/chains";
+import { fantom } from "wagmi/chains";
 import { publicProvider } from "wagmi/providers/public";
 import { metaMaskWallet } from "@rainbow-me/rainbowkit/wallets";
 import React from "react";
@@ -15,10 +15,7 @@ import Explore from "./pages/Explore";
 import Create from "./pages/Create";
 import Profile from "./pages/Profile";
 
-const { chains, provider } = configureChains(
-  [fantomTestnet],
-  [publicProvider()]
-);
+const { chains, provider } = configureChains([fantom], [publicProvider()]);
 
 const connectors = connectorsForWallets([
   {
